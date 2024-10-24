@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Algorithm.iml" filepath="$PROJECT_DIR$/.idea/Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programmers/Programmers.iml" filepath="$PROJECT_DIR$/Programmers/Programmers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programmers/week3/week3.iml" filepath="$PROJECT_DIR$/Programmers/week3/week3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programmers/week4/week4.iml" filepath="$PROJECT_DIR$/Programmers/week4/week4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programmers/week5/week5.iml" filepath="$PROJECT_DIR$/Programmers/week5/week5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programmers/week6/week6.iml" filepath="$PROJECT_DIR$/Programmers/week6/week6.iml" />
+    </modules>
+  </component>
+</project>
