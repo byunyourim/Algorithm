@@ -22,4 +22,22 @@ class Solution {
         
         return result.toString();
     }
+
+    public String refactoring(int[] food) {
+        
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i < food.length; i++) {
+            int n = food[i] / 2;
+            result.append(i).repeat(n);
+
+        }
+    
+        String reverseStr = new StringBuilder(result).reverse().toString();
+        result.append(0).append(reverseStr);
+        
+        
+        return result.toString();
+
+        
+    }
 }
