@@ -28,7 +28,7 @@ class Solution {
         StringBuilder result = new StringBuilder();
         for (int i = 1; i < food.length; i++) {
             int n = food[i] / 2;
-            result.append(i).repeat(n);
+            result.append(String.valueOf(i).repeat(n));
 
         }
     
