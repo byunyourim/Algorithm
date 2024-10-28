@@ -33,7 +33,30 @@ https://school.programmers.co.kr/learn/courses/30/lessons/92334#
 
 
 ## 의사코드
+```
+Set<String> blackList;
+Map<String, Set<String>> userMap
+Map<String, Integer> BlackCntMap;
+List<String> sendEamilIds;
+for (id_list) {
+    
+    for (report[idx]) {
+        blackList.add (report);
+        BlackCntMap.put("유저ID", cnt);
+        if (cnt >= k) sendEamilIds 에 넣기
 
+    }
+
+    userMap.put("id", blacklist);    
+}
+
+for (sendEamilIds) {
+    usermap 에 리스트에 있다면 cnt++;
+
+}
+return cnt;
+
+```
 
 
 
