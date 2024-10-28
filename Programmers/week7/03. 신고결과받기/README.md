@@ -38,16 +38,14 @@ Set<String> blackList;
 Map<String, Set<String>> userMap
 Map<String, Integer> BlackCntMap;
 List<String> sendEamilIds;
-for (id_list) {
-    
-    for (report[idx]) {
-        blackList.add (report);
-        BlackCntMap.put("유저ID", cnt);
-        if (cnt >= k) sendEamilIds 에 넣기
+for (report) {
 
-    }
+    이용자 : report[0]
+    신고당한ID : report[1]
 
-    userMap.put("id", blacklist);    
+    1 .BlackCntMap에 신고당한 유저와 횟수 넣기
+    2. usermap에 이용자와 신고당한 유저 넣기
+
 }
 
 for (sendEamilIds) {
