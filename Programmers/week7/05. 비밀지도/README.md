@@ -1,4 +1,6 @@
+## 비밀지도
 https://school.programmers.co.kr/learn/courses/30/lessons/17681
+- 소요시간 : 40 분
 
 ## 재정의
 - n : 한 변의 길이
