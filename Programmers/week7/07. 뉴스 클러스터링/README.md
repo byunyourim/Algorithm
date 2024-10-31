@@ -1,6 +1,6 @@
 ## 뉴스 클러스터링
 https://school.programmers.co.kr/learn/courses/30/lessons/17677
-- 소요시간 :
+- 소요시간 :50
 
 
 
@@ -28,20 +28,24 @@ for (str1) {
     두글자씩 끊는다.
     기호제거
     newStr1[]
+    리스트에 넣기
 }
 
 for (str2) {
     두글자씩 끊는다.
     기호 제거
     newStr2[]
+    리스트에 넣기
 }
 
-Map<>에 newStr1, newStr2 둘 다 넣기
+for (리스트1) {
+        
+    if (리스트 2에 들어있으면 ) inter++;
 
-int 교집합 inter n >= 2
-int 합집합 sum
+  union++;
+}
 
-int 자카드 유사도 (jvalue)
+int 자카드 유사도 (jvalue) inter / (union + 리스트2 사이즈)
 int value = jvalue  * 65536 , 소수점 아래 버리기
 
 
