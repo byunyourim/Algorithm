@@ -1,0 +1,53 @@
+import java.util.*;
+class Solution {
+    public int[] solution(int[] fees, String[] records) {
+        Map<String, Integer> carInList = new HashMap<>();
+        Map<String, Integer> timeList = new HashMap<>();
+        for (String record : records) {
+            String carNum = record.split(" ")[1];
+            String time = record.split(" ")[0];
+            String action = record.split(" ")[2];
+            
+            Integer minute = Integer.parseInt(time.split(":")[0]) * 60 + Integer.parseInt(time.split(":")[1]);
+            
+            if (action.equals("IN")) {
+                carInList.put(carNum, minute);
+            }
+            
+            if (action.equals("OUT")) {
+                Integer inTime = carInList.get(carNum);
+                Integer taken = minute - inTime;
+                timeList.put(carNum, timeList.getOrDefault(carNum, 0) + taken);
+                // 키 제거
+                carInList.remove(carNum);
+            }
+            
+            
+        }
+        
+        for (String carNum : carInList.keySet()) {
+            int inTime = carInList.get(carNum);
+            int parkedTime = 1439 - inTime;
+            timeList.put(carNum, timeList.getOrDefault(carNum, 0) + parkedTime);
+        }
+        
+        // 차량 번호 순으로 정렬
+        List<String> carNumbers = new ArrayList<>(timeList.keySet());
+        Collections.sort(carNumbers);
+
+        int[] answer = new int[carNumbers.size()];
+        for (int i = 0; i < carNumbers.size(); i++) {
+            String carNum = carNumbers.get(i);
+            int totalTime = timeList.get(carNum);
+            
+            int fee = fees[1];
+            if (totalTime > fees[0]) {
+                fee += Math.ceil((double)(totalTime - fees[0]) /  fees[2]) * fees[3];
+            }
+            
+            answer[i] = fee;
+        }
+        
+        return answer;
+    }
+}
