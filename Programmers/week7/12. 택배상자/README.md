@@ -20,6 +20,8 @@ https://school.programmers.co.kr/learn/courses/30/lessons/131704
 5. order에 있는 경우 뺀다.
 6. order의 뒤쪽에 있는 경우 보조 컨테이너로 옮기는 작업을 한 후에 뺀다. 반복
 
+- 시간 복잡도: O(n), n은 order의 길이로 각 상자를 한 번씩만 처리하므로 효율적입니다.
+- 공간 복잡도: O(n), 보조 컨테이너 벨트(스택)에 최대 n개의 상자가 쌓일 수 있습니다.
 
 
 
