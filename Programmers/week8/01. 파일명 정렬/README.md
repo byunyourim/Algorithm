@@ -27,6 +27,16 @@ https://school.programmers.co.kr/learn/courses/30/lessons/17686
 - 문자로 정렬 후
 - 숫자 정렬을 할 때 0 무시하고 정렬
 
+### 시간 복잡도
+파일 목록을 순회하면서 extractLeadingNumber를 호출한다. 정규 표현식을 사용하여 숫자를 추출하는데, 파일 이름의 길이(m)에 따라 O(m) 시간이 소요된다.  
+
+Comparator.comparing을 통해 HEAD와 NUMBER를 비교하는데, O(n log n)이다. (n은 파일 개수).
+전체 시간 복잡도는 O(n log n) + O(n * m)이다.  
+
+### 공간 복잡도
+파일 목록을 저장하기 위해 List<Map<String, Integer>>를 사용하고, 따라서 O(n) 공간이 필요하다. 각 파일 이름에 대해 정수 값을 저장하기 때문에 각 맵의 크기가 작다. 
+공간 사용량은 주로 리스트 크기에 의존한다.
+
 
 ## 의사코드
 ```
