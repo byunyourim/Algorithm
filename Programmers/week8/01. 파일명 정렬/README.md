@@ -31,7 +31,13 @@ https://school.programmers.co.kr/learn/courses/30/lessons/17686
 ## 의사코드
 ```
 List<Map<header, Number>> dataList
-// 문자열로 정렬, 같으면 문자로 정렬
+
+for (file) {
+    키 : 파일명 원본
+    value : 정렬할 숫자
+}
+
+// 문자열로 정렬 후 같으면 문자로 정렬
 dataList.stream()
       .sort();
 
