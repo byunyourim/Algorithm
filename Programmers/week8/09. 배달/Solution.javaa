@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int N, int[][] roads, int K) {
+        Map<Integer, List<int[]>> map = new HashMap<>();
+        for (int i = 1; i <= N; i++) {
+            map.put(i, new ArrayList<>());
+        }
+        
+        for (int[] road : roads) {
+            int start = road[0];
+            int end = road[1];
+            int weight = road[2];
+            
+            map.get(start).add(new int[]{end, weight});
+            map.get(end).add(new int[]{start, weight});
+        }
+        
+        int[] distances = new int[N + 1];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[1] = 0;
+        
+        PriorityQueue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
+        queue.add(new int[]{1, 0});
+        
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int currentNode = current[0];
+            int currentDistance = current[1];
+            
+            if (currentDistance > distances[currentNode]) continue;
+            
+            for (int[] neighbor : map.get(currentNode)) {
+                int adjacent = neighbor[0];
+                int weight = neighbor[1];
+                int distance = currentDistance + weight;
+                
+                if (distance < distances[adjacent]) {
+                    distances[adjacent] = distance;
+                    queue.add(new int[]{adjacent, distance});
+                }
+            }
+        }
+        int count = 0;
+        for (int i = 0; i <= N; i++) {
+            if (distances[i] <= K) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
