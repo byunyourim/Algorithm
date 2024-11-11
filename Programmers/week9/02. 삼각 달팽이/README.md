@@ -25,6 +25,10 @@ https://school.programmers.co.kr/learn/courses/30/lessons/68645
 
 
 
+#### 공간 복잡도: 달팽 배열의 크기 : n*n -> O(n^2)
+#### 시간 복잡도: 배열을 채우고 복사하는 과정 n * (n + 1) / 2 -> O(n^2)
+
+
 ## 의사코드
 ```
 x = 1, y = 0
