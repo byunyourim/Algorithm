@@ -1,5 +1,7 @@
-<img width="362" alt="image" src="https://github.com/user-attachments/assets/03f0484a-47fe-4722-9eff-a004c1d649e8">## 그래프
+## 그래프
 노드와 엣지의 표현 
+
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/03f0484a-47fe-4722-9eff-a004c1d649e8">
 
 ### 그래프 표현 방법
 #### 1. 엣지 리스트 (엣지를 중심으로 표현)
