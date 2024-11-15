@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; 
 class Solution {
     public int[] solution(String[][] places) {
         int[] answer = new int[5];
