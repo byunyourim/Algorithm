@@ -1,6 +1,6 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/42862
 
-
+ 
 
 ## 재정의
 - 체육 수업을 들을 수 있는 학생의 최대값
