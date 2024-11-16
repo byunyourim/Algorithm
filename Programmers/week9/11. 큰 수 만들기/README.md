@@ -1,6 +1,6 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/42883
 
-## 재정의
+## 재정의 
 - 어떤 숫자에서 k 개의 수를 제거했을 때 얻을 수 있는 가장 큰 수
 
  
