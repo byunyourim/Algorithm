@@ -9,7 +9,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/81302#fn1
 - O는 빈 테이블을 의미합니다.
 - X는 파티션을 의미합니다.
 - 거리 준수하며 앉은 경우 1, 아닌 경우 0 반환
-
+ 
 <br>
 
 
