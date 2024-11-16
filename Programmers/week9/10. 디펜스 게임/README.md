@@ -1,6 +1,6 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/142085
 
-
+ 
 
 ## 재정의
 - 병사 n명을 갖는다.
