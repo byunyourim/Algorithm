@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {a
+class Solution {
     public long solution(int r1, int r2) {
         long count = 0;
         
