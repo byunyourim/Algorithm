@@ -17,7 +17,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/169199
 #### 예제1
 <img width="141" alt="image" src="https://github.com/user-attachments/assets/512987a4-a8ff-435f-84b9-0c1b716a77fa">
 <img width="419" alt="image" src="https://github.com/user-attachments/assets/42ab2017-8c01-4f4e-b94b-3ad9da8f3ac5">
-
+ 
 #### 예제2
 <img width="499" alt="image" src="https://github.com/user-attachments/assets/ee7d4dc7-3d26-427d-bdfe-681f693f878d">
 
