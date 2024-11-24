@@ -37,9 +37,14 @@ https://school.programmers.co.kr/learn/courses/30/lessons/160585
 <br>
 
 #### 시간 복잡도
-- 보드판의 크기만큼 f(n^2)
+- 3x3 크기의 보드를 순회하며 O와 X의 개수를 계산, 고정된 3x3 배열이므로 상수 시간
+- O(1)
 #### 공간 복잡도
-- 2차원 배열 만큼의 공간 복잡도 
+- String[] board 항상 3x3로 고정되어 있음
+- 2차원 배열 arr는 (3x3)로 생성
+  oCount, xCount는 정수형 변수로 고정된 크기만 사용.
+- O(1)
+
 
 <br><br>
 
@@ -52,19 +57,23 @@ for (board) {
   보드판 세팅
   각 개수 확인
 }
-if (말이 아예 없으면) return 0
-if (oCnt < xCnt)  return 0
 
-for (arr) {
-  대각선인지 확인
+if (O, X가 아예 없으면) return 0;
+if (oCnt < xCnt)  return 0;
+if (oCnt > xCnt + 1) return 0;
 
-  if (대각선이 존재한다면) {
-      - O가 빙고인 경우 : O > X
-      - X가 빙고인 경우 : O == X
-  }
+int oWin = 0;
+int xWin = 0;
+for (1~3) {
+  if (대각선이 존재하는지 ) :
+     oWin++, xCnt++;
 }
- 
 
+if (둘다 대각선이 있는 경우) return 0;
+if (O 대각선이 존재하고, 차이가 1개가 아닌 경우) return 0
+if (x 대각선이 존재하고 , 둘의 개수가 갖지 않을 때) return 0;
+ 
+return 1;
  
 ```
 
