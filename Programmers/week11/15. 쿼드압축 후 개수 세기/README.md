@@ -16,26 +16,51 @@ https://school.programmers.co.kr/learn/courses/30/lessons/68936
 <br>
 
 ## 알고리즘
-1. N * N의 숫자가 같은지 확인
-2. 통째로 변경
-3. 위 과정 반복
+1. 배열이 통일되었는지 확인
+2. 통일되지 않으면 정사각형 배열을 같은 크기로 4분할한다.
+3. 배열이 더이상 나누어지지 않으면 0과 1의 개수를 결과로 반환한다.
 
 
 <br>
 
 #### 시간복잡도
+- isUniform : O(각 영역 size?)
+- 분할 및 재귀호출 : logN
+- O(N^2logN)
 #### 공간복잡도
+- 재귀호출 공간 O(logN)
 
 <br>
 
 ## 의사코드
 ```
-for (int col) {
-  for (int row) {
-    
-  }
+func solution : {
+  compress ( )
 }
 
+func compress (arr, x, y, length) : {
+  if 통합되어있는지 확인 isUniform
+      if 0이면 return new int {1, 0}
+      if 1이면 return new int {0, 1}
+
+  arr 4개의 영역으로 분할
+  1. topleft : compress();
+  2. topright : compress();
+  3. bottomleft : compress();
+  4. bottomright : compress();
+
+  return new int {0 개수, 1 개수};
+ 
+}
+
+func isUniform (arr, x, y, length): {
+  int v = arr[x][y] 첫번째 값
+  for (rows) {
+    for (cols) {
+      arr[i][j]가 v와 다르면 return false;
+    }
+  } return true;
+}
 
 ```
 
