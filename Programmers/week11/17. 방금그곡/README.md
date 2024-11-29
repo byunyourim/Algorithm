@@ -11,33 +11,30 @@ https://school.programmers.co.kr/learn/courses/30/lessons/17683
 <br><br>
 
 ## 알고리즘
-- 재생 순서로 정렬
-- 재생시간 확인, 음의 길이로 노래 길이 확인, 길이만큼 문자ㅏ열(str) 만들기
-- m이 str에 포함되는지 확인
-- 조건에 일치하지 않는 경우 return none;
-
-<br>
-
-#### 시간복잡도
-#### 공간복잡도
+1. 음악 코드 변경 (샵 처리)
+2. musicinfo 파싱
+3. 악보가 재생 시간만큼 반복되도록
+4. mkey가 music과 일치하는지 확인
+   
 
 <br><br>
 
 ## 의사코드
 ```
-musicinfos[0]으로 정렬 할 필요 있나?
 
 Map<String, Music> musicMap = 노래 이름, 노래 정보(재생시간, 음)
 
 Set<Music> musicSet
 for (entry : musicMap) {
+  music 파싱
 
-  if (m이 포함되면) musicSet에 추가
-  if 조건에 일치하는 음악이 여러 개면? 재생된 시간이 제일 긴 음악 반환,
-  if 시간도 같으면 먼저 입력된 음악제목 반환 
+  음악 재생시간에 맞게 전체 음악 반환 generateFullMusic();
+
+  if 음악이 일치하는지 확인
+     answer = title;
 
 }
-return "NONE";
+return answer;
 
 
 
