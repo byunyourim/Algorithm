@@ -21,40 +21,36 @@ import java.io.*;
 public class Game369 {
     public static void main(String[] args) {
         List<Player> players = new ArrayList<>();
-        players.add(new Player("A", 1));
-        players.add(new Player("B", 3));
-        players.add(new Player("C", 5));
+        players.add(new Player("A", 0.1));
+        players.add(new Player("B", 0.3));
 
         Game game = new Game(players);
 
         game.play();
     }
-
-
 }
 
 
 class Game {
     List<Player> players;
+    int currentNumber;
 
     Game(List<Player> players) {
         this.players = players;
-    }
-
-    public void play1(int i) {
-        String s = String.valueOf(i);
-        long count = s.chars()
-            .filter(c -> c == '3' || c == '6' || c == '9')
-            .count();
-
-        String res = count > 0 ? "짝".repeat( (int) count ) : s;
+        this.currentNumber = 1;
     }
 
     public void play() {
         while (true) {
             for (Player p : players) {
-                
+                String res = p.takeTurn(currentNumber);
 
+                if (res.equals("오답")) {
+                    System.out.println(p.getName() + " 오답: 게임 종료!");
+                    return;
+                }
+                System.out.println(p.getName() + " 응답 : " + res);
+                currentNumber++;
             }
         }
     }
@@ -63,19 +59,37 @@ class Game {
 class Player {
     String name;
     double errorRate;
+    Random random;
 
     Player(String name, double errorRate) {
         this.name = name;
         this.errorRate = errorRate;
+        this.random = new Random();
     }
 
-    public boolean correctAnswer() {
+    public String takeTurn(int number) {
+        if (random.nextDouble() < errorRate) {
+            return failAction(number);
+        }
+        return correctAction(number);
+    }
 
-        return false;
+    public String correctAction(int number) {
+        String s = String.valueOf(number);
+
+        long count = s.chars()
+            .filter(c -> c == '3' || c == '6' || c == '9')
+            .count();
+
+        return count > 0 ? "짝".repeat( (int) count ) : s;
+    }
+
+    public String failAction(int number) {
+        return "오답";
+    }
+
+    public String getName() {
+        return name;
     }
 }
 
-class ClapCounter {
-
-
-}
